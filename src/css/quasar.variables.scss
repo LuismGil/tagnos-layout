@@ -31,6 +31,9 @@ $positive  : #55AB3E;
 $negative  : #CB1919;
 $info      : #31CCEC;
 $warning   : #F2C037;
+
+$bgPrimary : #F3F4F1;
+$bgSecondary: #F8F8F8;
 $transparent : transparent;
 $modalBg   : rgba(11, 8, 8, 0.56);
 
@@ -39,5 +42,7 @@ $mediaQueries : (
   'xs' : 768px,
   'sm' : 991px,
   'md' : 1199px,
-  'lg' : 1440px
+  'lg' : 1440px,
+  'xl' : 1680px,
+  'xxl': 1890px
 )

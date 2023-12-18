@@ -4,6 +4,7 @@
 
 <script>
 import { defineComponent } from 'vue'
+import 'assets/style.css'
 
 export default defineComponent({
   name: 'App'
