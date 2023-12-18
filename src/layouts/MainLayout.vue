@@ -19,6 +19,8 @@
       </q-toolbar>
     </q-header>
 
+    <main-menu/>
+
     <q-page-container>
       <router-view />
     </q-page-container>
@@ -26,20 +28,15 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import MainMenu from 'src/components/MainMenu.vue'
 
-export default defineComponent({
-  name: 'MainLayout',
+export default {
+
   components: {
-  },
-  data () {
-    return {
-      toggleLeftDrawer: false
-    }
-  },
-  create: {
+    MainMenu
   }
-})
+
+}
 </script>
 
 <style
