@@ -1,1 +1,15 @@
 // app global css in SCSS form
+@import './base/fonts';
+@import './base/mixins';
+
+:root {
+  font-size: 62.5%;
+}
+
+
+body {
+  background-color: $bgPrimary;
+  font-family: 'Montserrat';
+  margin: 0;
+  padding: 0;
+}

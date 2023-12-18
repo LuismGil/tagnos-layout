@@ -23,3 +23,16 @@ $positive  : #21BA45;
 $negative  : #C10015;
 $info      : #31CCEC;
 $warning   : #F2C037;
+
+$bgPrimary : #F3F4F1;
+$bgSecondary: #F8F8F8;
+
+$mediaQueries : (
+  'xxs': 479px,
+  'xs' : 768px,
+  'sm' : 991px,
+  'md' : 1199px,
+  'lg' : 1440px,
+  'xl' : 1680px,
+  'xxl': 1890px
+)
