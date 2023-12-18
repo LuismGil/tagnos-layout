@@ -1,7 +1,6 @@
 <template>
 
   <q-drawer
-      v-model="leftDrawerOpen"
       show-if-above
       bordered
       style="background-color: #337DCE;"
