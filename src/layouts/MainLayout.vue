@@ -1,26 +1,9 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
-
-        <q-toolbar-title>
-          Quasar App
-        </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
-      </q-toolbar>
+    <q-header >
+      <main-header />
     </q-header>
-
     <main-menu/>
-
     <q-page-container>
       <router-view />
     </q-page-container>
@@ -28,15 +11,18 @@
 </template>
 
 <script>
+
+import { defineComponent } from 'vue'
+import MainHeader from 'src/layouts/MainHeader.vue'
 import MainMenu from 'src/components/MainMenu.vue'
 
-export default {
-
+export default defineComponent({
+  name: 'MainLayout',
   components: {
+    MainHeader,
     MainMenu
   }
-
-}
+})
 </script>
 
 <style
