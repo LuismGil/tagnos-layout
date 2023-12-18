@@ -1,0 +1,5 @@
+@mixin boxWhite {
+  background-color: $white;
+  box-shadow: $boxShadow;
+  box-sizing: border-box;
+}

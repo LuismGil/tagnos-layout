@@ -1,1 +1,191 @@
-// app global css in SCSS form
+@import './base/field';
+@import './base/fonts';
+@import './base/mixins';
+
+.app {
+  @include boxWhite;
+  height: auto;
+  margin: 35px 0;
+  width: auto;
+  
+  @media (min-width: map-get($mediaQueries, 'xxs')) {
+    margin: 35px 0;
+  }
+
+  @media (min-width: map-get($mediaQueries, 'sm')) {
+    margin: 10px 0 35px;
+  }
+
+  &__header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 50px 0 0;
+    width: 90%;
+  
+    &__wrapper-title {
+      font-weight: 800;
+  
+      .q-icon {
+        font-size: 16px;
+        margin: 0 5px 5px 0;
+      }
+    }
+    
+    &__icons {
+      align-items: center;
+      display: flex;
+      gap: 10px;
+    }
+  }
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $bgPrimary;
+  font-family: 'Montserrat';
+  margin: 0;
+  padding: 0;
+}
+
+button.q-btn.q-btn-item.non-selectable.no-outline.q-btn--flat.q-btn--rectangle.text-primary.q-btn--actionable.q-focusable.q-hoverable {
+  @include boxWhite;
+  color: $dark !important;
+  margin: 0 3px;
+  opacity: 1;
+}
+
+.opened-menu {
+  margin: 80px auto 0 auto;
+  width: 90%;
+
+  @media (min-width: map-get($mediaQueries, 'sm')) {
+    margin: 35px auto 0 250px;
+    width: 70%;
+  }
+
+  @media (min-width: map-get($mediaQueries, 'md')) {
+    width: 75%;
+  }
+
+  @media (min-width: map-get($mediaQueries, 'lg')) {
+    width: 80%;
+  }
+}
+
+.swal2-popup {
+  width: 48rem !important;
+}
+
+.swal2-styled {
+  box-shadow: $boxShadow !important;
+  font-size: 1.2rem !important;
+  width: 8rem !important;
+}
+
+.swal2-confirm {
+  background-color: var(--q-primary) !important;
+}
+
+.swal2-cancel {
+  background-color: $white !important;
+  color: $dark !important;
+}
+
+.swal2-container.swal2-center {
+  z-index: 9999 !important;
+}
+
+body.swal2-toast-shown .swal2-container {
+  top: 85px !important;
+}
+
+.swal2-container.swal2-top-end>.swal2-popup, .swal2-container.swal2-top-right>.swal2-popup {
+  background-color: $white !important;
+  display: flex !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  justify-content: space-between;
+}
+
+.q-table--dense .q-table__top {
+  padding: 5px 0;
+}
+
+.q-table__container {
+  padding: 2px;
+}
+
+.q-table__title {
+  font-size: 15px;
+}
+
+.q-table tbody td {
+  font-size: 10px;
+
+  @media (min-width: map-get($mediaQueries, 'sm')) {
+    font-size: 12px;
+  }
+}
+
+.q-table__middle {
+  border: 1px solid $gray;
+  height: 330px;
+}
+
+.content-text__container {
+  img {
+    height: auto;
+    width: 100% !important;
+  }
+}
+
+.topico-ext__main-wrapper__resposta__descricao {
+  img {
+    height: auto;
+    width: 50% !important;
+  }
+}
+
+.mensagem-extendido__mensagem__conteudo__right__mensagem {
+  img {
+    height: auto;
+    width: 50% !important;
+  }
+}
+
+.card__content__mensagem {
+  p {
+    margin: 0;
+  }  
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+  width:10px;
+}
+
+::-webkit-scrollbar-button:increment, ::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $lightGray;
+  border-radius: 20px;
+  border: 2px solid $white;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
