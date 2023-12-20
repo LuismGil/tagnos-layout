@@ -124,8 +124,16 @@ export default defineComponent({
           ]
         },
         {
-          label: 'Matrículas',
-          icon: 'fa-solid fa-file'
+          label: 'Manutenções',
+          icon: 'fa-light fa-wrench'
+        },
+        {
+          label: 'Lançamentos',
+          icon: 'fa-regular fa-folder'
+        },
+        {
+          label: 'Consultas',
+          icon: 'fa-solid fa-search'
         }
       ]
     }
