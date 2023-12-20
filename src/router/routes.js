@@ -1,10 +1,24 @@
 const routes = [
   {
     path: '/',
-    component: () => import('layouts/MainLayout.vue'),
+    component: () => import('layouts/MainLogin.vue'),
+    redirect: '/login',
     children: [
       {
-        path: '',
+        name: 'login',
+        path: '/login',
+        component: () => import('pages/Login.vue')
+      }
+    ]
+  },
+  {
+    path: '/matriculas',
+    component: () => import('layouts/MainLayout.vue'),
+    redirect: '/matriculas',
+    children: [
+      {
+        name: 'teste',
+        path: '/teste',
         component: () => import('pages/IndexPage.vue')
       },
       {

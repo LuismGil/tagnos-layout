@@ -7,7 +7,7 @@
   height: auto;
   margin: 35px 0;
   width: auto;
-  
+
   @media (min-width: map-get($mediaQueries, 'xxs')) {
     margin: 35px 0;
   }
@@ -23,16 +23,16 @@
     margin: 0 auto;
     padding: 50px 0 0;
     width: 90%;
-  
+
     &__wrapper-title {
       font-weight: 800;
-  
+
       .q-icon {
         font-size: 16px;
         margin: 0 5px 5px 0;
       }
     }
-    
+
     &__icons {
       align-items: center;
       display: flex;
@@ -80,6 +80,10 @@ button.q-btn.q-btn-item.non-selectable.no-outline.q-btn--flat.q-btn--rectangle.t
 
 .swal2-popup {
   width: 48rem !important;
+}
+
+.q-item__section--side > .q-icon{
+  color: white;
 }
 
 .swal2-styled {
@@ -162,7 +166,7 @@ body.swal2-toast-shown .swal2-container {
 .card__content__mensagem {
   p {
     margin: 0;
-  }  
+  }
 }
 
 ::-webkit-scrollbar {

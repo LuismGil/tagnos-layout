@@ -51,7 +51,7 @@
         <q-icon name="fas fa-edit"/>
         <q-icon name="fas fa-file"/>
         <q-icon name="fas fa-print"/>
-        <q-icon name="far fa-times"/>
+        <q-icon name="far fa-times" size="32px"/>
         <q-icon name="fas fa-trash-alt"
           color="red"
         />
@@ -152,6 +152,7 @@ export default defineComponent({
       font-size: 20px;
       margin: 25px 0 0 0;
       .q-icon {
+        cursor: pointer;
         font-weight: 400;
         margin: 0 24px 0 0;
       }
