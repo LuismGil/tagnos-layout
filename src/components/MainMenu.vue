@@ -73,44 +73,44 @@ export default defineComponent({
               icon: 'fa-regular fa-file'
             },
             {
-              to: 'matriculas',
-              label: 'Matrículas',
-              icon: 'fa-regular fa-file'
+              to: 'teste',
+              label: 'Rematrículas',
+              icon: 'fa-regular fa-file-plus'
             },
             {
-              to: 'matriculas',
-              label: 'Matrículas',
-              icon: 'fa-regular fa-file'
+              to: 'teste',
+              label: 'Pré-Matrículas',
+              icon: 'fa-regular fa-user-check'
             },
             {
-              to: 'matriculas',
-              label: 'Matrículas',
-              icon: 'fa-regular fa-file'
+              to: 'teste',
+              label: 'Uniformes',
+              icon: 'fa-regular fa-tag'
             },
             {
-              to: 'matriculas',
-              label: 'Matrículas',
-              icon: 'fa-regular fa-file'
+              to: 'teste',
+              label: 'Ocorrências',
+              icon: 'fa-regular fa-clipboard'
             },
             {
-              to: 'matriculas',
-              label: 'Matrículas',
-              icon: 'fa-regular fa-file'
+              to: 'teste',
+              label: 'Histórico Escolar',
+              icon: 'fa-regular fa-box-archive'
             },
             {
-              to: 'matriculas',
-              label: 'Matrículas',
-              icon: 'fa-regular fa-file'
+              to: 'teste',
+              label: 'Novo Histórico Escolar',
+              icon: 'fa-regular fa-list'
             },
             {
-              to: 'matriculas',
-              label: 'Matrículas',
-              icon: 'fa-regular fa-file'
+              to: 'teste',
+              label: 'Transferências',
+              icon: 'fa-regular fa-repeat'
             },
             {
-              to: 'matriculas',
-              label: 'Matrículas',
-              icon: 'fa-regular fa-file'
+              to: 'teste',
+              label: 'Fotos por Matrícula',
+              icon: 'fa-regular fa-camera'
             }
           ]
         },
@@ -120,6 +120,14 @@ export default defineComponent({
         }
       ]
     }
+  },
+  methods: {
+    // selectItem (item, index) {
+    //   item.itensSubMenu.forEach((subItem) => {
+    //     subItem.selected = false
+    //   })
+    //   item.itensSubMenu[index].selected = true
+    // }
   }
 })
 </script>
@@ -129,6 +137,26 @@ export default defineComponent({
   lang="scss"
 >
 .q-router-link--exact-active {
+  background-color: #123760;
   font-weight: 600;
+}
+.menu {
+  position: relative;
+}
+.menu_footer {
+  position: absolute;
+  bottom: 30px;
+}
+.btn_Sair {
+  background-color: #ffdde3;
+  color: #e6492d;
+  text-transform: capitalize;
+}
+.selected {
+  background-color: #123760;
+}
+.q-router-link--exact-active:hover {
+  background-color: #1c4b7d;
+  border-left: 5px solid #123760;
 }
 </style>
