@@ -81,7 +81,8 @@ export default defineComponent({
   },
   methods: {
     visualizarMatricula (matricula) {
-      console.log('aq?', matricula)
+      this.$router.push(`/matricula/${matricula.id}`)
+      console.log('aqasdf?', matricula)
     }
   }
 })

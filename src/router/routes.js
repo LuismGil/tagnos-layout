@@ -11,6 +11,11 @@ const routes = [
         name: 'matriculas',
         path: '/matriculas',
         component: () => import('pages/Matriculas.vue')
+      },
+      {
+        name: 'matricula',
+        path: '/matricula/:id',
+        component: () => import('pages/Matricula.vue')
       }
     ]
   },
