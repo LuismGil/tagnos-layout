@@ -11,10 +11,17 @@
     style="background-color: #184372"
     class="menu text-white"
   >
-    <div class="flex justify-center mt-[29px] mb-[33px]">
-      <img src="../assets/img/Logo-municipio.svg" alt="" />
-    </div>
-    <q-list>
+  <div class="flex justify-center mt-[29px] h-[100px]">
+    <q-icon class="h-[50px]"
+    v-if="miniState"
+    name="fa-solid fa-bars fa-xl">
+  </q-icon>
+    <img v-else id="imgLogo"
+    src="../assets/img/Logo-municipio.svg"
+    alt=""
+    />
+  </div>
+    <q-list class="list-menu mt-[33px]">
       <q-expansion-item
         v-for="(item, indexItem) in itensMenu"
         :key="indexItem"
@@ -31,8 +38,6 @@
             :key="indexItemSubMenu"
             :to="{ name: `${itemSubMenu.to}` }"
             active-class="q-item-no-link-highlighting"
-            @click="selectItem(item, indexItemSubMenu)"
-            :class="{ selected: itemSubMenu.selected }"
           >
             <q-item-section avatar>
               <q-icon :name="itemSubMenu.icon" />
@@ -76,66 +81,66 @@ export default defineComponent({
       itensMenu: [
         {
           label: 'Matrículas',
-          icon: 'fa-regular fa-file',
+          icon: 'fa-thin fa-file-lines',
           itensSubMenu: [
             {
               to: 'matriculas',
               label: 'Matrículas',
-              icon: 'fa-regular fa-file'
+              icon: 'fa-thin fa-file-lines'
             },
             {
-              to: '',
+              to: 'teste',
               label: 'Rematrículas',
-              icon: 'fa-regular fa-file-plus'
+              icon: 'fa-thin fa-file-plus'
             },
             {
-              to: '',
+              to: 'teste',
               label: 'Pré-Matrículas',
-              icon: 'fa-regular fa-user-check'
+              icon: 'fa-thin fa-user-check'
             },
             {
-              to: '',
+              to: 'teste',
               label: 'Uniformes',
-              icon: 'fa-regular fa-tag'
+              icon: 'fa-thin fa-tag'
             },
             {
-              to: '',
+              to: 'teste',
               label: 'Ocorrências',
-              icon: 'fa-regular fa-clipboard'
+              icon: 'fa-thin fa-clipboard'
             },
             {
-              to: '',
+              to: 'teste',
               label: 'Histórico Escolar',
-              icon: 'fa-regular fa-box-archive'
+              icon: 'fa-thin fa-box-archive'
             },
             {
-              to: '',
+              to: 'teste',
               label: 'Novo Histórico Escolar',
-              icon: 'fa-regular fa-list'
+              icon: 'fa-thin fa-list'
             },
             {
-              to: '',
+              to: 'teste',
               label: 'Transferências',
-              icon: 'fa-regular fa-repeat'
+              icon: 'fa-thin fa-repeat'
             },
             {
-              to: '',
+              to: 'teste',
               label: 'Fotos por Matrícula',
-              icon: 'fa-regular fa-camera'
+              icon: 'fa-thin fa-camera'
             }
           ]
         },
         {
           label: 'Manutenções',
-          icon: 'fa-light fa-wrench'
+          icon: 'fa-thin fa-wrench'
         },
         {
           label: 'Lançamentos',
-          icon: 'fa-regular fa-folder'
+          icon: 'fa-thin fa-folder'
         },
         {
           label: 'Consultas',
-          icon: 'fa-solid fa-search'
+          icon: 'fa-thin fa-magnifying-glass'
         }
       ]
     }
@@ -158,24 +163,40 @@ export default defineComponent({
 >
 .q-router-link--exact-active {
   font-weight: 600;
+  background-color: #123760;
 }
+
 .menu {
   position: relative;
 }
+
+.list-menu {
+  height: 65vh;
+  overflow: auto;
+}
+
+::-webkit-scrollbar:vertical {
+  width:10px;
+  display: none;
+}
+
 .menu_footer {
   position: absolute;
   bottom: 30px;
 }
+
 .btn_Sair {
   background-color: #ffdde3;
   color: #e6492d;
   text-transform: capitalize;
 }
+
 .selected {
   background-color: #123760;
 }
+
 .q-router-link--exact-active:hover {
-  background-color: #1C4B7D;
+  background-color: #1c4b7d;
   border-left: 5px solid #123760;
 }
 </style>
