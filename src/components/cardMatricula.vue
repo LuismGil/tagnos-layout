@@ -1,16 +1,17 @@
 <template>
   <div class="container-status-card">
-    <div class="container-status-card__bar" />
+    <div class="container-status-card__bar" :style="{ backgroundColor: matricula.color}"/>
     <div class="container-status-card__header">
       <div class="container-status-card__header__left">
         <q-icon
           name="far fa-eye"
           @click="visualizarMatricula(matricula)"
         />
-        <span class="container-status-card__header__left__name">
+        <p class="container-status-card__header__left__name">
           {{ matricula.nome }}
-        </span> |
-        <span> <b>MATRÍCULA</b> {{ matricula.id }}</span>
+        </p>
+        <q-separator vertical/>
+        <p> <span>MATRÍCULA</span> {{ matricula.id }}</p>
       </div>
       <q-icon
         :name="show ? 'far fa-chevron-up': 'fas fa-chevron-down'"
@@ -77,12 +78,10 @@ export default defineComponent({
     }
   },
   created () {
-    console.log(this.matricula)
   },
   methods: {
     visualizarMatricula (matricula) {
       this.$router.push(`/matricula/${matricula.id}`)
-      console.log('aqasdf?', matricula)
     }
   }
 })
@@ -119,12 +118,20 @@ export default defineComponent({
     padding: 25px;
 
     &__left {
+      display: flex;
+
       .q-icon {
         margin: 0 12px 0 0;
       }
 
       &__name {
         font-weight: 600;
+        width: 400px;
+      }
+
+      .q-separator {
+        margin: 0 15px;
+        color: blue;
       }
     }
 

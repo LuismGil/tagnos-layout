@@ -54,7 +54,7 @@
           class="mb-[20px]"
           style="border-top: 2px solid white; width: 80%"
         ></div>
-        <q-btn class="btn_Sair w-[150px]" @click="sair">
+        <q-btn class="btn_Sair w-[150px]" @click="sair()">
           <q-icon name="exit_to_app" />
           &nbsp; <b>Sair</b></q-btn
         >
@@ -152,6 +152,9 @@ export default defineComponent({
       })
 
       item.itensSubMenu[index].selected = true
+    },
+    sair () {
+      this.$router.push('/login')
     }
   }
 })
