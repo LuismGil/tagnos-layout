@@ -27,6 +27,13 @@
       <div class="header__icons__foto">
         <img src="src/assets/img/header.png" />
       </div>
+      <q-btn
+        class="header__icons__btn-sair"
+        label="Entrar"
+        size="md"
+        icon="exit_to_app"
+        unelevated
+      />
     </div>
   </div>
   <div>
@@ -112,7 +119,9 @@ export default defineComponent({
   }
 
   &__icons {
+    align-items: center;
     display: flex;
+    justify-content: center;
     gap: 10px;
 
     div {
@@ -137,6 +146,14 @@ export default defineComponent({
         height: 44px;
         width: 44px;
       }
+    }
+
+    &__btn-sair {
+      background-color: #ffdde3;
+      color: #e6492d;
+      height: 20px;
+      text-transform: capitalize;
+      width: 150px;
     }
   }
 }
