@@ -1,9 +1,15 @@
 <template>
   <q-drawer
+    v-model="drawer"
     show-if-above
-    bordered
-    style="background-color: #337dce"
-    class="text-white"
+    :mini="miniState"
+    @mouseover="miniState = false"
+    @mouseout="miniState = true"
+    mini-to-overlay
+    :width="300"
+    :breakpoint="500"
+    style="background-color: #184372"
+    class="menu text-white"
   >
     <div class="flex justify-center mt-[29px] mb-[33px]">
       <img src="../assets/img/Logo-municipio.svg" alt="" />
@@ -16,10 +22,11 @@
         :label="item.label"
       >
         <q-list
-          class="q-pl-lg m-[16px] rounded-[10px]"
+          class="m-[16px] rounded-[10px]"
           style="background-color: #245890"
         >
           <q-item
+            class="rounded-[10px]"
             v-for="(itemSubMenu, indexItemSubMenu) in item.itensSubMenu"
             :key="indexItemSubMenu"
             :to="{ name: `${itemSubMenu.to}` }"
@@ -34,32 +41,23 @@
           </q-item>
         </q-list>
       </q-expansion-item>
-      <q-btn
-        class="w-[150px] h-[44px] text-red"
-        style="
-          position: absolute;
-          bottom: 6%;
-          left: 50%;
-          transform: translateX(-50%);
-          background-color: #ffdde3;
-          text-transform: capitalize;
-        "
-      >
-        <q-icon name="exit_to_app" /> &nbsp;
-        <b> Sair </b>
-      </q-btn>
-      <div
-        class="flex"
-        style="
-          position: absolute;
-          bottom: 20px;
-          left: 50%;
-          transform: translateX(-50%);
-        "
-      >
-        <img src="../assets/icons/icon-versao.svg" alt="" />&nbsp; Versão >
-        1.38.0
-      </div>
+
+      <q-item-section class="menu_footer flex column items-center w-full">
+        <div
+          class="mb-[20px]"
+          style="border-top: 2px solid white; width: 80%"
+        ></div>
+        <q-btn class="btn_Sair w-[150px]" @click="sair">
+          <q-icon name="exit_to_app" />
+          &nbsp; <b>Sair</b></q-btn
+        >
+        <div class="mt-[20px]">
+          <div class="info">
+            <q-icon name="fa-regular fa-code-branch" />
+            Versão > 1.38.0
+          </div>
+        </div>
+      </q-item-section>
     </q-list>
   </q-drawer>
 </template>
@@ -71,10 +69,12 @@ export default defineComponent({
   components: {},
   data () {
     return {
+      drawer: false,
+      miniState: true,
       itensMenu: [
         {
           label: 'Matrículas',
-          icon: 'fa-solid fa-file',
+          icon: 'fa-regular fa-file',
           itensSubMenu: [
             {
               to: 'matriculas',
@@ -139,12 +139,13 @@ export default defineComponent({
     }
   },
   methods: {
-    // selectItem (item, index) {
-    //   item.itensSubMenu.forEach((subItem) => {
-    //     subItem.selected = false
-    //   })
-    //   item.itensSubMenu[index].selected = true
-    // }
+    selectItem (item, index) {
+      item.itensSubMenu.forEach((subItem) => {
+        subItem.selected = false
+      })
+
+      item.itensSubMenu[index].selected = true
+    }
   }
 })
 </script>
@@ -154,9 +155,10 @@ export default defineComponent({
   lang="scss"
 >
 .q-router-link--exact-active {
-  background-color: #123760;
   font-weight: 600;
+  background-color: #123760;
 }
+
 .menu {
   position: relative;
 }
