@@ -11,7 +11,7 @@
           {{ matricula.nome }}
         </p>
         <q-separator vertical/>
-        <p> <span>MATRÍCULA</span> {{ matricula.id }}</p>
+        <p class="container-status-card__header__left__matricula"> <span>MATRÍCULA</span> {{ matricula.id }}</p>
       </div>
       <q-icon
         :name="show ? 'far fa-chevron-up': 'fas fa-chevron-down'"
@@ -49,13 +49,19 @@
         </span>
       </div>
       <div class="container-status-card__body__secundaria">
-        <q-icon name="fas fa-edit"/>
-        <q-icon name="fas fa-file"/>
+        <q-icon
+          v-for="(icon, iconIndex) in icons"
+          :key="iconIndex"
+          :name="icon.name"
+          :size="icon.size"
+          :color="icon.color"
+        />
+        <!-- <q-icon name="fas fa-file"/>
         <q-icon name="fas fa-print"/>
         <q-icon name="far fa-times" size="32px"/>
         <q-icon name="fas fa-trash-alt"
           color="red"
-        />
+        /> -->
       </div>
     </div>
   </div>
@@ -74,7 +80,34 @@ export default defineComponent({
   },
   data () {
     return {
-      show: false
+      show: false,
+      icons: [
+        {
+          name: 'fas fa-edit',
+          color: '',
+          size: ''
+        },
+        {
+          name: 'fas fa-file',
+          color: '',
+          size: ''
+        },
+        {
+          name: 'fas fa-print',
+          color: '',
+          size: ''
+        },
+        {
+          name: 'far fa-times',
+          color: '',
+          size: '30px'
+        },
+        {
+          name: 'fas fa-trash-alt',
+          color: 'red',
+          size: ''
+        }
+      ]
     }
   },
   created () {
@@ -127,6 +160,12 @@ export default defineComponent({
       &__name {
         font-weight: 600;
         width: 400px;
+      }
+
+      &__matricula {
+        span {
+          font-weight: 600;
+        }
       }
 
       .q-separator {
