@@ -1,30 +1,36 @@
 <template>
   <div class="header">
-    <div class="header__info" style="border: 2px solid red;">
-      <div class="header__info__usuario w-[600px] flex flex-col" style="border: 2px solid green;">
-        <img src="../assets/img/Logo-municipio-azul.svg" alt="">
-        <div class="header__info__usuario__user" >
+    <div class="header__usuario">
+      <img
+        src="../assets/img/Logo-municipio-azul.svg"
+        alt=""
+      >
+      <div class="header__usuario__info">
+        <div class="header__usuario__info__user" >
           {{ bemVindo + " " + usuario.nome + " - " }}
           <span>{{ usuario.matricula }}</span>
         </div>
-        <div class="header__info__usuario__municipio">
+        <div class="header__usuario__info__municipio">
           {{ municipio + " - " + data }}
         </div>
       </div>
-      <div class="header__info__icons">
-        <div
-          v-for="(icon, indexIcon) in iconsHeader"
-          :key="indexIcon"
-        >
-          <div :class="icon.class">
-            <q-icon :name="icon.name" />
-          </div>
-        </div>
-        <div class="header__info__icons__foto">
-          <img src="src/assets/img/header.png" />
+    </div>
+    <div class="header__icons">
+      <div
+        v-for="(icon, indexIcon) in iconsHeader"
+        :key="indexIcon"
+      >
+        <div :class="icon.class">
+          <q-icon :name="icon.name" />
         </div>
       </div>
+      <div class="header__icons__foto">
+        <img src="src/assets/img/header.png" />
+      </div>
     </div>
+  </div>
+  <div>
+    hola
   </div>
 </template>
 
@@ -47,14 +53,6 @@ export default defineComponent({
         {
           class: 'header__icons__notificacoes',
           name: 'fa-light fa-bell'
-        },
-        {
-          class: 'header__icons__modulos',
-          name: 'fa-light fa-grid-2'
-        },
-        {
-          class: 'header__icons__mensagens',
-          name: 'fa-regular fa-message'
         }
       ],
       infoSistema: [
@@ -82,16 +80,21 @@ export default defineComponent({
 @import 'src/css/base/_mixins.scss';
 
 .header {
-  &__info {
-    @include boxWhite;
-    color: #3E464E;
-    display: flex;
-    height: 164px;
-    justify-content: space-around;
-    padding: 25px 60px;
+  @include boxWhite;
+  align-items: center;
+  color: #3E464E;
+  height: 164px;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 60px;
 
-    &__usuario {
-      font-size: 16px;
+  &__usuario {
+    align-items: center;
+    display: flex;
+    font-size: 16px;
+
+    &__info {
+      margin: 0 0 0 70px;
 
       &__user {
         font-weight: 500;
@@ -106,52 +109,34 @@ export default defineComponent({
       }
     }
 
-    &__icons {
-      display: flex;
-      gap: 10px;
-
-      div {
-        align-items: center;
-        border: 1px solid #68717A;
-        border-radius: 32px;
-        display: flex;
-        justify-content: center;
-        height: 50px;
-        width: 50px;
-
-        div {
-          border: none;
-          height: 24px;
-          width: 24px;
-        }
-      }
-
-      &__foto {
-        img {
-          border-radius: 32px;
-          height: 44px;
-          width: 44px;
-        }
-      }
-    }
   }
 
-  &__info-sistema {
-    @include boxWhite;
-    background-color: #123760;
-    color: $white;
+  &__icons {
     display: flex;
-    font-size: 12px;
-    font-weight: 400;
-    height: 39px;
-    justify-content: space-between;
-    padding: 10px 60px;
+    gap: 10px;
 
-    &__item {
+    div {
       align-items: center;
+      border: 1px solid #68717A;
+      border-radius: 32px;
       display: flex;
-      flex-direction: row;
-      gap: 10px;
+      justify-content: center;
+      height: 50px;
+      width: 50px;
+
+      div {
+        border: none;
+        height: 24px;
+        width: 24px;
+      }
+    }
+
+    &__foto {
+      img {
+        border-radius: 32px;
+        height: 44px;
+        width: 44px;
+      }
     }
   }
 }
