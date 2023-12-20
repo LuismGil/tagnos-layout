@@ -1,11 +1,16 @@
 <template>
   <div class="container-status-card">
-    <div class="container-status-card__bar"/>
+    <div class="container-status-card__bar" />
     <div class="container-status-card__header">
       <div class="container-status-card__header__left">
-        <q-icon name="far fa-eye"/>
-        <span class="container-status-card__header__left__name">MAICON JEFERSON SIMON  RODRIGUES DOS SANTOS</span> |
-        <span> <b>MATRÍCULA</b> 555555</span>
+        <q-icon
+          name="far fa-eye"
+          @click="visualizarMatricula(matricula)"
+        />
+        <span class="container-status-card__header__left__name">
+          {{ matricula.nome }}
+        </span> |
+        <span> <b>MATRÍCULA</b> {{ matricula.id }}</span>
       </div>
       <q-icon
         :name="show ? 'far fa-chevron-up': 'fas fa-chevron-down'"
@@ -17,14 +22,30 @@
       class="container-status-card__body"
     >
       <div class="container-status-card__body__primaria">
-        <span class="container-status-card__body__primaria__titulo">CHAMADA</span>
-        <span class="container-status-card__body__primaria__conteudo">111</span>
-        <span class="container-status-card__body__primaria__titulo">Nível</span>
-        <span class="container-status-card__body__primaria__conteudo">1º Ano</span>
-        <span class="container-status-card__body__primaria__titulo">Turno</span>
-        <span class="container-status-card__body__primaria__conteudo">MATUTINO</span>
-        <span class="container-status-card__body__primaria__titulo">Turma</span>
-        <span class="container-status-card__body__primaria__conteudo">TURMA(DANILO)</span>
+        <span class="container-status-card__body__primaria__titulo">
+          CHAMADA
+        </span>
+        <span class="container-status-card__body__primaria__conteudo">
+          {{ matricula.chamada }}
+        </span>
+        <span class="container-status-card__body__primaria__titulo">
+          Nível
+        </span>
+        <span class="container-status-card__body__primaria__conteudo">
+          {{ matricula.nivel }}
+        </span>
+        <span class="container-status-card__body__primaria__titulo">
+          Turno
+        </span>
+        <span class="container-status-card__body__primaria__conteudo">
+          {{ matricula.turno }}
+        </span>
+        <span class="container-status-card__body__primaria__titulo">
+          Turma
+        </span>
+        <span class="container-status-card__body__primaria__conteudo">
+          {{ matricula.turma }}
+        </span>
       </div>
       <div class="container-status-card__body__secundaria">
         <q-icon name="fas fa-edit"/>
@@ -45,9 +66,9 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'CardMatricula',
   props: {
-    matriculas: {
-      type: Array,
-      default: () => []
+    matricula: {
+      type: Object,
+      default: () => ({})
     }
   },
   data () {
@@ -56,6 +77,12 @@ export default defineComponent({
     }
   },
   created () {
+    console.log(this.matricula)
+  },
+  methods: {
+    visualizarMatricula (matricula) {
+      console.log('aq?', matricula)
+    }
   }
 })
 </script>
@@ -71,6 +98,7 @@ export default defineComponent({
   background: #FFF;
   color: #68717A;
   position: relative;
+  margin: 0 0 15px 0;
 
   &__bar {
     background-color: blue;
@@ -128,7 +156,6 @@ export default defineComponent({
       }
     }
   }
-
 }
 
 </style>
