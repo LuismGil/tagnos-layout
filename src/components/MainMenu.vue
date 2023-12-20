@@ -14,7 +14,7 @@
     <div class="flex justify-center mt-[29px] mb-[33px]">
       <img src="../assets/img/Logo-municipio.svg" alt="" />
     </div>
-    <q-list>
+    <q-list class="list-menu">
       <q-expansion-item
         v-for="(item, indexItem) in itensMenu"
         :key="indexItem"
@@ -162,18 +162,32 @@ export default defineComponent({
 .menu {
   position: relative;
 }
+
+.list-menu {
+  height: 65vh;
+  overflow: auto;
+}
+
+::-webkit-scrollbar:vertical {
+  width:10px;
+  display: none;
+}
+
 .menu_footer {
   position: absolute;
   bottom: 30px;
 }
+
 .btn_Sair {
   background-color: #ffdde3;
   color: #e6492d;
   text-transform: capitalize;
 }
+
 .selected {
   background-color: #123760;
 }
+
 .q-router-link--exact-active:hover {
   background-color: #1c4b7d;
   border-left: 5px solid #123760;
