@@ -69,9 +69,9 @@ export default defineComponent({
       versao: '1.0.0',
       login: {
         cpf: null,
-        password: null,
-        isPwd: false
-      }
+        password: null
+      },
+      isPwd: true
     }
   }
 })
