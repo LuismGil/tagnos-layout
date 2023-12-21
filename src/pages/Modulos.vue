@@ -246,6 +246,7 @@ export default defineComponent({
       align-items: center;
       border-radius: 12px;
       cursor: pointer;
+      color: #3E464E;
       display: flex;
       height: 106px;
       padding: 0 32px;
