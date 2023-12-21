@@ -36,7 +36,6 @@
       />
     </div>
   </div>
-
   <h1 class="container-modulos">
     Módulos
   </h1>
@@ -48,9 +47,16 @@
         :key="moduloIndex"
         :style="{border: `2px solid ${modulo.cor}`}"
       >
-        <img :src="modulo.src" alt="modulo.alt">
-        <div class="modulos-card__card__descricao">{{ modulo.descricao }}</div>
-        <q-icon class="modulos-icon__2" name="fa-regular fa-chevron-right" />
+        <div class="modulos-card__card__left">
+          <img class="modulos-card__card__left__icon" :src="modulo.src" alt="modulo.alt">
+          <div class="modulos-card__card__left__descricao">
+            {{ modulo.descricao }}
+          </div>
+        </div>
+        <q-icon
+          size="25px"
+          name="fa-solid fa-chevron-right"
+        />
       </q-card>
     </div>
   </div>
@@ -79,49 +85,49 @@ export default defineComponent({
       listaModulos: [
         {
           descricao: 'SECRETARIA ESCOLAR',
-          src: '',
+          src: '/img/iconsModulos/icon-SecretariaEscolar.svg',
           name: '',
           cor: '#C41B2C'
         },
         {
           descricao: 'DIÁRIO DE CLASSE',
-          icon: 'fa-thin fa-box-archive',
+          src: '/img/iconsModulos/icon-DiarioClasse.svg',
           name: '',
           cor: '#D6A80F'
         },
         {
           descricao: 'COORDENAÇÃO PEDAGÓGICA',
-          icon: 'fa-thin fa-box-archive',
+          src: '/img/iconsModulos/icon-CoordenacaoPedagogica.svg',
           name: '',
           cor: '#149224'
         },
         {
           descricao: 'SALA DE TECNOLOGIA',
-          icon: 'fa-thin fa-box-archive',
+          src: '/img/iconsModulos/icon-SalaTecnologia.svg',
           name: '',
           cor: '#5F096D'
         },
         {
           descricao: 'SECRETARIA DE EDUCAÇÃO',
-          icon: 'fa-thin fa-box-archive',
+          src: '/img/iconsModulos/icon-SecretariaEducacao.svg',
           name: '',
           cor: '#7A0A0A'
         },
         {
           descricao: 'CONTROLE FINANCEIRO',
-          icon: 'fa-thin fa-box-archive',
+          src: '/img/iconsModulos/icon-ControleFinanceiro.svg',
           name: '',
           cor: '#0069A8'
         },
         {
           descricao: 'CONTROLE DE BIBLIOTÉCA',
-          icon: 'fa-thin fa-box-archive',
+          src: '/img/iconsModulos/icon-ControleBiblioteca.svg',
           name: '',
           cor: '#635DC9'
         },
         {
           descricao: 'TRANSPORTE ESCOLAR',
-          icon: 'fa-thin fa-box-archive',
+          src: '/img/iconsModulos/icon-TransporteEscolar.svg',
           name: '',
           cor: '#E76E00'
         }
@@ -214,29 +220,7 @@ export default defineComponent({
   justify-content: center;
   width: 100%;
 }
-.modulos-card{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 59px;
-  width: 80%;
-  margin-bottom: 44px;
-  &__card{
-    cursor: pointer;
-    display: flex;
-    height: 106px;
-    width: 501px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 40px;
-    border-radius: 12px;
-    &__descricao{
-      font-size: 16px;
-      font-weight: bold;
-    }
-  }
-}
+
 .container-modulos{
   text-align: center;
   font-size: 32px;
@@ -245,12 +229,42 @@ export default defineComponent({
   margin-top: 70px;
   margin-bottom: 70px;
 }
-.modulos-icon{
-  margin-left: 36px;
-  font-size: 65px;
-}
-.modulos-icon__2{
-  font-size: 20px;
-  font-weight: bold;
+
+.modulos-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 59px;
+  width: 80%;
+  margin-bottom: 44px;
+
+  &__card {
+    cursor: pointer;
+    display: flex;
+    height: 106px;
+    width: 501px;
+    display: flex;
+    align-items: center;
+    padding: 0 36px;
+    justify-content: space-between;
+    gap: 40px;
+    border-radius: 12px;
+
+    &__left {
+      align-items: center;
+      display: flex;
+
+      &__icon {
+        margin: 0 40px 0 0;
+        height: 75px;
+        width: 75px;
+      }
+
+      &__descricao{
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+
+  }
 }
 </style>
