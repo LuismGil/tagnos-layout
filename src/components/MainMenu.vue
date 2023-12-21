@@ -23,6 +23,7 @@
   </div>
     <q-list class="list-menu mt-[33px]">
       <q-expansion-item
+        class="item-expansao"
         v-for="(item, indexItem) in itensMenu"
         :key="indexItem"
         :icon="item.icon"
@@ -81,7 +82,7 @@ export default defineComponent({
       itensMenu: [
         {
           label: 'Matrículas',
-          icon: 'fa-thin fa-file-lines',
+          icon: 'far fa-file-alt',
           itensSubMenu: [
             {
               to: 'matriculas',
@@ -116,12 +117,12 @@ export default defineComponent({
             {
               to: 'teste',
               label: 'Novo Histórico Escolar',
-              icon: 'fa-thin fa-list'
+              icon: 'fa-thin fa-list-ul'
             },
             {
               to: 'teste',
               label: 'Transferências',
-              icon: 'fa-thin fa-repeat'
+              icon: 'fa-thin fa-arrows-repeat'
             },
             {
               to: 'teste',
@@ -132,15 +133,15 @@ export default defineComponent({
         },
         {
           label: 'Manutenções',
-          icon: 'fa-thin fa-wrench'
+          icon: 'far fa-wrench'
         },
         {
           label: 'Lançamentos',
-          icon: 'fa-thin fa-folder'
+          icon: 'far fa-folder'
         },
         {
           label: 'Consultas',
-          icon: 'fa-thin fa-magnifying-glass'
+          icon: 'far fa-search'
         }
       ]
     }
@@ -176,6 +177,16 @@ export default defineComponent({
 .list-menu {
   height: 65vh;
   overflow: auto;
+}
+
+.q-expansion-item {
+  font-weight: 600;
+}
+
+.q-list {
+  .q-item {
+    font-weight: 300;
+  }
 }
 
 ::-webkit-scrollbar:vertical {

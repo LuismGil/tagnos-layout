@@ -88,7 +88,7 @@ export default defineComponent({
           size: ''
         },
         {
-          name: 'fas fa-file',
+          name: 'far fa-file-alt',
           color: '',
           size: ''
         },
@@ -103,7 +103,7 @@ export default defineComponent({
           size: '30px'
         },
         {
-          name: 'fas fa-trash-alt',
+          name: 'far fa-trash-alt',
           color: 'red',
           size: ''
         }
