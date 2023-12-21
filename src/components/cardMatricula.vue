@@ -1,6 +1,6 @@
 <template>
   <div class="container-status-card">
-    <div class="container-status-card__bar" :style="{ backgroundColor: matricula.color}"/>
+    <div class="container-status-card__bar" :style="{ backgroundColor: matricula.color}" />
     <div class="container-status-card__header">
       <div class="container-status-card__header__left">
         <q-icon
@@ -10,7 +10,7 @@
         <p class="container-status-card__header__left__name">
           {{ matricula.nome }}
         </p>
-        <q-separator vertical/>
+        <q-separator vertical />
         <p class="container-status-card__header__left__matricula"> <span>MATRÍCULA</span> {{ matricula.id }}</p>
       </div>
       <q-icon
@@ -151,6 +151,7 @@ export default defineComponent({
     padding: 25px;
 
     &__left {
+      align-items: center;
       display: flex;
 
       .q-icon {

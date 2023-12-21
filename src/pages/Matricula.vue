@@ -26,6 +26,8 @@
         active-bg-color="primary"
         indicator-color="primary"
         class="matricula__tabs__wp"
+        align="justify"
+        no-caps
       >
         <q-tab
           v-for="(tab, tabIndex) in listaTabs"
@@ -36,15 +38,20 @@
         />
       </q-tabs>
     </div>
+    <div class="matricula__card">
+      <container-info-matricula />
+    </div>
   </div>
 </template>
 
 <script>
 import { defineComponent } from 'vue'
+import ContainerInfoMatricula from 'src/components/ContainerInfoMatricula.vue'
 
 export default defineComponent({
   name: 'EducacaoMatriculas',
   components: {
+    ContainerInfoMatricula
   },
   data () {
     return {
@@ -133,7 +140,6 @@ export default defineComponent({
         font-size: 16px;
         font-weight: 500;
       }
-
     }
   }
 
@@ -148,6 +154,18 @@ export default defineComponent({
       font-weight: 500;
     }
 
+    &__wrapper {
+      display: flex;
+      justify-content: flex-start !important;
+    }
+  }
+
+  &__card {
+    background-color: white;
+    border: 1px solid #DFE0EB;
+    border-radius: 12px;
+    height: 442px;
+    padding: 25px;
   }
 }
 
