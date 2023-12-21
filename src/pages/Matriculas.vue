@@ -18,7 +18,12 @@
     <bar-estatus
       :status-matricula="statusMatricula"
     />
-    <card-matricula />
+    <div
+      v-for="(matricula, indexMatricula) in listaMatricula"
+      :key="indexMatricula"
+    >
+      <card-matricula :matricula="matricula" />
+    </div>
   </div>
 </template>
 
@@ -26,6 +31,7 @@
 import { defineComponent } from 'vue'
 import BarEstatus from 'src/components/BarEstatus.vue'
 import cardMatricula from 'src/components/cardMatricula.vue'
+import mockMatriculas from 'src/mocks/matriculas.json'
 
 export default defineComponent({
   name: 'EducacaoMatriculas',
@@ -67,7 +73,8 @@ export default defineComponent({
           nome: 'Reprovado Falta',
           cor: '#871010'
         }
-      ]
+      ],
+      listaMatricula: mockMatriculas
     }
   }
 })
@@ -78,7 +85,8 @@ export default defineComponent({
   lang="scss"
 >
   .container-matriculas {
-    padding: 0 68px 0 62px;
+    padding: 25px 68px 0 62px;
+
     h1 {
       color: #3E464E;
       font-size: 32px;

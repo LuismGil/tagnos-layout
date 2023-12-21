@@ -23,6 +23,7 @@
   </div>
     <q-list class="list-menu mt-[33px]">
       <q-expansion-item
+        class="item-expansao"
         v-for="(item, indexItem) in itensMenu"
         :key="indexItem"
         :icon="item.icon"
@@ -54,7 +55,7 @@
           class="mb-[20px]"
           style="border-top: 2px solid white; width: 80%"
         ></div>
-        <q-btn class="btn_Sair w-[150px]" @click="sair">
+        <q-btn class="btn_Sair w-[150px]" @click="sair()">
           <q-icon name="exit_to_app" />
           &nbsp; <b>Sair</b></q-btn
         >
@@ -81,7 +82,7 @@ export default defineComponent({
       itensMenu: [
         {
           label: 'Matrículas',
-          icon: 'fa-thin fa-file-lines',
+          icon: 'far fa-file-alt',
           itensSubMenu: [
             {
               to: 'matriculas',
@@ -116,12 +117,12 @@ export default defineComponent({
             {
               to: 'teste',
               label: 'Novo Histórico Escolar',
-              icon: 'fa-thin fa-list'
+              icon: 'fa-thin fa-list-ul'
             },
             {
               to: 'teste',
               label: 'Transferências',
-              icon: 'fa-thin fa-repeat'
+              icon: 'fa-thin fa-arrows-repeat'
             },
             {
               to: 'teste',
@@ -132,15 +133,15 @@ export default defineComponent({
         },
         {
           label: 'Manutenções',
-          icon: 'fa-thin fa-wrench'
+          icon: 'far fa-wrench'
         },
         {
           label: 'Lançamentos',
-          icon: 'fa-thin fa-folder'
+          icon: 'far fa-folder'
         },
         {
           label: 'Consultas',
-          icon: 'fa-thin fa-magnifying-glass'
+          icon: 'far fa-search'
         }
       ]
     }
@@ -152,6 +153,9 @@ export default defineComponent({
       })
 
       item.itensSubMenu[index].selected = true
+    },
+    sair () {
+      this.$router.push('/login')
     }
   }
 })
@@ -175,6 +179,22 @@ export default defineComponent({
   overflow: auto;
 }
 
+.q-expansion-item {
+  font-weight: 600;
+}
+
+.q-list {
+  padding: 12px 0px;
+  .q-item {
+    font-weight: 300;
+
+    &:hover {
+      background-color: #1c4b7d;
+      border-left: 5px solid #123760;
+    }
+  }
+}
+
 ::-webkit-scrollbar:vertical {
   width:10px;
   display: none;
@@ -193,10 +213,5 @@ export default defineComponent({
 
 .selected {
   background-color: #123760;
-}
-
-.q-router-link--exact-active:hover {
-  background-color: #1c4b7d;
-  border-left: 5px solid #123760;
 }
 </style>

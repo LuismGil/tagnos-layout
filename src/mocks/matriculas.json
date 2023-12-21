@@ -5,6 +5,79 @@
     "chamada": "55",
     "nivel": "1º Ano",
     "turno": "MATUTINO",
-    "turma": "Turma"
+    "turma": "TURMA(DANILO)",
+    "color": "#1A8428"
+  },
+  {
+    "nome": "JEFERSON DOS SANTOS",
+    "id": "247827482",
+    "chamada": "545",
+    "nivel": "1º Ano",
+    "turno": "MATUTINO",
+    "turma": "TURMA(DANILO)",
+    "color": "#691177"
+  },
+  {
+    "nome": "MARIA FERNANDA LARES PEROZA",
+    "id": "42166",
+    "chamada": "23123",
+    "nivel": "3º Ano",
+    "turno": "MATUTINO",
+    "turma": "TURMA(DANILO)",
+    "color": "#D6A80F"
+  },
+  {
+    "nome": "MAICON JEFERSON SIMON  RODRIGUES DOS SANTOS",
+    "id": "35353535",
+    "chamada": "55",
+    "nivel": "1º Ano",
+    "turno": "MATUTINO",
+    "turma": "TURMA(DANILO)",
+    "color": "#1A8428"
+  },
+  {
+    "nome": "JEFERSON DOS SANTOS",
+    "id": "247827482",
+    "chamada": "545",
+    "nivel": "1º Ano",
+    "turno": "MATUTINO",
+    "turma": "TURMA(DANILO)",
+    "color": "#691177"
+  },
+  {
+    "nome": "MARIA FERNANDA LARES PEROZA",
+    "id": "42166",
+    "chamada": "23123",
+    "nivel": "3º Ano",
+    "turno": "MATUTINO",
+    "turma": "TURMA(DANILO)",
+    "color": "#D6A80F"
+  },
+  {
+    "nome": "MAICON JEFERSON SIMON  RODRIGUES DOS SANTOS",
+    "id": "35353535",
+    "chamada": "55",
+    "nivel": "1º Ano",
+    "turno": "MATUTINO",
+    "turma": "TURMA(DANILO)",
+    "color": "#1A8428"
+  },
+  {
+    "nome": "JEFERSON DOS SANTOS",
+    "id": "247827482",
+    "chamada": "545",
+    "nivel": "1º Ano",
+    "turno": "MATUTINO",
+    "turma": "TURMA(DANILO)",
+    "color": "#691177"
+  },
+  {
+    "nome": "MARIA FERNANDA LARES PEROZA",
+    "id": "42166",
+    "chamada": "23123",
+    "nivel": "3º Ano",
+    "turno": "MATUTINO",
+    "turma": "TURMA(DANILO)",
+    "color": "#D6A80F"
   }
 ]

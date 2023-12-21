@@ -1,11 +1,17 @@
 <template>
   <div class="container-status-card">
-    <div class="container-status-card__bar"/>
+    <div class="container-status-card__bar" :style="{ backgroundColor: matricula.color}"/>
     <div class="container-status-card__header">
       <div class="container-status-card__header__left">
-        <q-icon name="far fa-eye"/>
-        <span class="container-status-card__header__left__name">MAICON JEFERSON SIMON  RODRIGUES DOS SANTOS</span> |
-        <span> <b>MATRÍCULA</b> 555555</span>
+        <q-icon
+          name="far fa-eye"
+          @click="visualizarMatricula(matricula)"
+        />
+        <p class="container-status-card__header__left__name">
+          {{ matricula.nome }}
+        </p>
+        <q-separator vertical/>
+        <p class="container-status-card__header__left__matricula"> <span>MATRÍCULA</span> {{ matricula.id }}</p>
       </div>
       <q-icon
         :name="show ? 'far fa-chevron-up': 'fas fa-chevron-down'"
@@ -17,23 +23,45 @@
       class="container-status-card__body"
     >
       <div class="container-status-card__body__primaria">
-        <span class="container-status-card__body__primaria__titulo">CHAMADA</span>
-        <span class="container-status-card__body__primaria__conteudo">111</span>
-        <span class="container-status-card__body__primaria__titulo">Nível</span>
-        <span class="container-status-card__body__primaria__conteudo">1º Ano</span>
-        <span class="container-status-card__body__primaria__titulo">Turno</span>
-        <span class="container-status-card__body__primaria__conteudo">MATUTINO</span>
-        <span class="container-status-card__body__primaria__titulo">Turma</span>
-        <span class="container-status-card__body__primaria__conteudo">TURMA(DANILO)</span>
+        <span class="container-status-card__body__primaria__titulo">
+          CHAMADA
+        </span>
+        <span class="container-status-card__body__primaria__conteudo">
+          {{ matricula.chamada }}
+        </span>
+        <span class="container-status-card__body__primaria__titulo">
+          Nível
+        </span>
+        <span class="container-status-card__body__primaria__conteudo">
+          {{ matricula.nivel }}
+        </span>
+        <span class="container-status-card__body__primaria__titulo">
+          Turno
+        </span>
+        <span class="container-status-card__body__primaria__conteudo">
+          {{ matricula.turno }}
+        </span>
+        <span class="container-status-card__body__primaria__titulo">
+          Turma
+        </span>
+        <span class="container-status-card__body__primaria__conteudo">
+          {{ matricula.turma }}
+        </span>
       </div>
       <div class="container-status-card__body__secundaria">
-        <q-icon name="fas fa-edit"/>
-        <q-icon name="fas fa-file"/>
+        <q-icon
+          v-for="(icon, iconIndex) in icons"
+          :key="iconIndex"
+          :name="icon.name"
+          :size="icon.size"
+          :color="icon.color"
+        />
+        <!-- <q-icon name="fas fa-file"/>
         <q-icon name="fas fa-print"/>
         <q-icon name="far fa-times" size="32px"/>
         <q-icon name="fas fa-trash-alt"
           color="red"
-        />
+        /> -->
       </div>
     </div>
   </div>
@@ -45,17 +73,49 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'CardMatricula',
   props: {
-    matriculas: {
-      type: Array,
-      default: () => []
+    matricula: {
+      type: Object,
+      default: () => ({})
     }
   },
   data () {
     return {
-      show: false
+      show: false,
+      icons: [
+        {
+          name: 'fas fa-edit',
+          color: '',
+          size: ''
+        },
+        {
+          name: 'far fa-file-alt',
+          color: '',
+          size: ''
+        },
+        {
+          name: 'fas fa-print',
+          color: '',
+          size: ''
+        },
+        {
+          name: 'far fa-times',
+          color: '',
+          size: '30px'
+        },
+        {
+          name: 'far fa-trash-alt',
+          color: 'red',
+          size: ''
+        }
+      ]
     }
   },
   created () {
+  },
+  methods: {
+    visualizarMatricula (matricula) {
+      this.$router.push(`/matricula/${matricula.id}`)
+    }
   }
 })
 </script>
@@ -71,6 +131,7 @@ export default defineComponent({
   background: #FFF;
   color: #68717A;
   position: relative;
+  margin: 0 0 15px 0;
 
   &__bar {
     background-color: blue;
@@ -90,12 +151,26 @@ export default defineComponent({
     padding: 25px;
 
     &__left {
+      display: flex;
+
       .q-icon {
         margin: 0 12px 0 0;
       }
 
       &__name {
         font-weight: 600;
+        width: 400px;
+      }
+
+      &__matricula {
+        span {
+          font-weight: 600;
+        }
+      }
+
+      .q-separator {
+        margin: 0 15px;
+        color: blue;
       }
     }
 
@@ -129,7 +204,6 @@ export default defineComponent({
       }
     }
   }
-
 }
 
 </style>
