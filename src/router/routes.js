@@ -33,6 +33,18 @@ const routes = [
       }
     ]
   },
+  {
+    path: '/modulos',
+    component: () => import('layouts/MainModulos.vue'),
+    redirect: '/modulos',
+    children: [
+      {
+        name: 'modulos',
+        path: '/modulos',
+        component: () => import('pages/Modulos.vue')
+      }
+    ]
+  },
 
   // Always leave this as last one,
   // but you can also remove it

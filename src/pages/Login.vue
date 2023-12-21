@@ -49,6 +49,7 @@
           label="Entrar "
           padding="xs xl"
           no-caps
+          @click="entrar()"
         />
       </div>
     </div>
@@ -73,6 +74,11 @@ export default defineComponent({
       },
       isPwd: true
     }
+  },
+  methods: {
+    entrar () {
+      this.$router.push('/modulos')
+    }
   }
 })
 </script>
@@ -91,6 +97,7 @@ export default defineComponent({
     background-image: url("../assets/img/02-0519-0584-campo-grande-vr.png");
     background-repeat: no-repeat;
     background-blend-mode: darken;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     font-size: 32px;
@@ -109,7 +116,6 @@ export default defineComponent({
 
       .q-separator {
         background: white;
-        /* height: 50px; */
       }
     }
 
@@ -147,7 +153,7 @@ export default defineComponent({
       height: 474px;
       padding: 45px 30px;
       position: relative;
-      width: 498px;
+      width: 440px;
 
       &__titulo {
         color: #3E464E;
