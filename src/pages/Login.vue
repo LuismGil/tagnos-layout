@@ -49,6 +49,7 @@
           label="Entrar "
           padding="xs xl"
           no-caps
+          @click="entrar()"
         />
       </div>
     </div>
@@ -72,6 +73,11 @@ export default defineComponent({
         password: null
       },
       isPwd: true
+    }
+  },
+  methods: {
+    entrar () {
+      this.$router.push('/modulos')
     }
   }
 })

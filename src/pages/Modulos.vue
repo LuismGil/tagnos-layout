@@ -29,7 +29,7 @@
       </div>
       <q-btn
         class="header__icons__btn-sair"
-        label="Entrar"
+        label="Sair"
         size="md"
         icon="exit_to_app"
         unelevated
@@ -40,16 +40,17 @@
     Módulos
   </h1>
   <div class="modulos-container">
-    <div class="modulos-card">
-      <div
-        class="modulos-card__card"
+    <div class="modulos-container__modulos-card">
+      <router-link
+        class="modulos-container__modulos-card__card"
         v-for="(modulo, moduloIndex) in listaModulos"
         :key="moduloIndex"
         :style="{border: `2px solid ${modulo.cor}`}"
+        :to="{ name: `${modulo.name}` }"
       >
-        <div class="modulos-card__card__left">
-          <img class="modulos-card__card__left__icon" :src="modulo.src" alt="modulo.alt">
-          <div class="modulos-card__card__left__descricao">
+        <div class="modulos-container__modulos-card__card__left">
+          <img class="modulos-container__modulos-card__card__left__icon" :src="modulo.src" alt="modulo.alt">
+          <div class="modulos-container__modulos-card__card__left__descricao">
             {{ modulo.descricao }}
           </div>
         </div>
@@ -57,7 +58,7 @@
           size="25px"
           name="fa-solid fa-chevron-right"
         />
-      </div>
+      </router-link>
     </div>
   </div>
 
@@ -86,7 +87,7 @@ export default defineComponent({
         {
           descricao: 'SECRETARIA ESCOLAR',
           src: '/img/iconsModulos/icon-SecretariaEscolar.svg',
-          name: '',
+          name: 'matriculas',
           cor: '#C41B2C'
         },
         {
@@ -214,12 +215,6 @@ export default defineComponent({
   }
 
 }
-.modulos-container{
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
 
 .container-modulos{
   text-align: center;
@@ -229,40 +224,51 @@ export default defineComponent({
   margin-top: 70px;
   margin-bottom: 70px;
 }
-
-.modulos-card {
+.modulos-container{
   display: flex;
-  flex-wrap: wrap;
-  gap: 59px;
-  width: 80%;
-  margin-bottom: 44px;
+  justify-content: center;
+  width: 100%;
 
-  &__card {
-    align-items: center;
-    border-radius: 12px;
-    cursor: pointer;
+  &__modulos-card {
     display: flex;
-    height: 106px;
-    padding: 0 32px;
-    justify-content: space-between;
-    width: 501px;
+    flex-wrap: wrap;
+    width: 502px;
+    margin-bottom: 44px;
+    justify-content: center;
 
-    &__left {
-      align-items: center;
-      display: flex;
-
-      &__icon {
-        margin: 0 40px 0 0;
-        height: 75px;
-        width: 75px;
-      }
-
-      &__descricao{
-        font-size: 16px;
-        font-weight: bold;
-      }
+    @media (min-width: map-get($mediaQueries, 'xs')) {
+      gap: 59px;
+      margin: 10px 0 35px;
+      width: 1080px;
     }
 
+    &__card {
+      align-items: center;
+      border-radius: 12px;
+      cursor: pointer;
+      display: flex;
+      height: 106px;
+      padding: 0 32px;
+      justify-content: space-between;
+      width: 501px;
+
+      &__left {
+        align-items: center;
+        display: flex;
+
+        &__icon {
+          margin: 0 40px 0 0;
+          height: 75px;
+          width: 75px;
+        }
+
+        &__descricao{
+          font-size: 16px;
+          font-weight: bold;
+        }
+      }
+
+    }
   }
 }
 </style>
