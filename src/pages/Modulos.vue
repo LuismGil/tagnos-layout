@@ -33,6 +33,7 @@
         size="md"
         icon="exit_to_app"
         unelevated
+        @click="sair()"
       />
     </div>
   </div>
@@ -134,6 +135,11 @@ export default defineComponent({
         }
       ]
     }
+  },
+  methods: {
+    sair () {
+      this.$router.push('login')
+    }
   }
 })
 </script>
@@ -210,7 +216,7 @@ export default defineComponent({
       color: #e6492d;
       height: 20px;
       text-transform: capitalize;
-      width: 150px;
+      width: 130px;
     }
   }
 
@@ -232,12 +238,12 @@ export default defineComponent({
   &__modulos-card {
     display: flex;
     flex-wrap: wrap;
-    width: 502px;
-    margin-bottom: 44px;
+    gap: 59px;
     justify-content: center;
+    margin-bottom: 44px;
+    width: 502px;
 
     @media (min-width: map-get($mediaQueries, 'xs')) {
-      gap: 59px;
       margin: 10px 0 35px;
       width: 1080px;
     }
@@ -258,8 +264,8 @@ export default defineComponent({
         display: flex;
 
         &__icon {
-          margin: 0 40px 0 0;
           height: 75px;
+          margin: 0 40px 0 0;
           width: 75px;
         }
 
