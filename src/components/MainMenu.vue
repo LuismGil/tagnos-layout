@@ -184,8 +184,14 @@ export default defineComponent({
 }
 
 .q-list {
+  padding: 12px 0px;
   .q-item {
     font-weight: 300;
+
+    &:hover {
+      background-color: #1c4b7d;
+      border-left: 5px solid #123760;
+    }
   }
 }
 
@@ -207,10 +213,5 @@ export default defineComponent({
 
 .selected {
   background-color: #123760;
-}
-
-.q-router-link--exact-active:hover {
-  background-color: #1c4b7d;
-  border-left: 5px solid #123760;
 }
 </style>
