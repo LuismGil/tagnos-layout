@@ -41,7 +41,7 @@
   </h1>
   <div class="modulos-container">
     <div class="modulos-card">
-      <q-card
+      <div
         class="modulos-card__card"
         v-for="(modulo, moduloIndex) in listaModulos"
         :key="moduloIndex"
@@ -57,7 +57,7 @@
           size="25px"
           name="fa-solid fa-chevron-right"
         />
-      </q-card>
+      </div>
     </div>
   </div>
 
@@ -238,16 +238,14 @@ export default defineComponent({
   margin-bottom: 44px;
 
   &__card {
+    align-items: center;
+    border-radius: 12px;
     cursor: pointer;
     display: flex;
     height: 106px;
-    width: 501px;
-    display: flex;
-    align-items: center;
-    padding: 0 36px;
+    padding: 0 32px;
     justify-content: space-between;
-    gap: 40px;
-    border-radius: 12px;
+    width: 501px;
 
     &__left {
       align-items: center;
