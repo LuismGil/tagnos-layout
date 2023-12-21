@@ -85,49 +85,49 @@ export default defineComponent({
       ],
       listaModulos: [
         {
-          descricao: 'SECRETARIA ESCOLAR',
+          descricao: 'Secretaria Escolar',
           src: '/img/iconsModulos/icon-SecretariaEscolar.svg',
           name: 'matriculas',
           cor: '#C41B2C'
         },
         {
-          descricao: 'DIÁRIO DE CLASSE',
+          descricao: 'Diário de Classe',
           src: '/img/iconsModulos/icon-DiarioClasse.svg',
           name: '',
           cor: '#D6A80F'
         },
         {
-          descricao: 'COORDENAÇÃO PEDAGÓGICA',
+          descricao: 'Coordenação Pedagógica',
           src: '/img/iconsModulos/icon-CoordenacaoPedagogica.svg',
           name: '',
           cor: '#149224'
         },
         {
-          descricao: 'SALA DE TECNOLOGIA',
+          descricao: 'Sala de Tecnologia',
           src: '/img/iconsModulos/icon-SalaTecnologia.svg',
           name: '',
           cor: '#5F096D'
         },
         {
-          descricao: 'SECRETARIA DE EDUCAÇÃO',
+          descricao: 'Secretaria de Educação',
           src: '/img/iconsModulos/icon-SecretariaEducacao.svg',
           name: '',
           cor: '#7A0A0A'
         },
         {
-          descricao: 'CONTROLE FINANCEIRO',
+          descricao: 'Controle Financeiro',
           src: '/img/iconsModulos/icon-ControleFinanceiro.svg',
           name: '',
           cor: '#0069A8'
         },
         {
-          descricao: 'CONTROLE DE BIBLIOTÉCA',
+          descricao: 'Controle de Bibliotéca',
           src: '/img/iconsModulos/icon-ControleBiblioteca.svg',
           name: '',
           cor: '#635DC9'
         },
         {
-          descricao: 'TRANSPORTE ESCOLAR',
+          descricao: 'Transporte Escolar',
           src: '/img/iconsModulos/icon-TransporteEscolar.svg',
           name: '',
           cor: '#E76E00'
@@ -263,11 +263,10 @@ export default defineComponent({
         }
 
         &__descricao{
-          font-size: 16px;
-          font-weight: bold;
+          font-size: 22px;
+          font-weight: 500;
         }
       }
-
     }
   }
 }
