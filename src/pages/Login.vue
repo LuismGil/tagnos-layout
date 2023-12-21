@@ -110,7 +110,6 @@ export default defineComponent({
 
       .q-separator {
         background: white;
-        /* height: 50px; */
       }
     }
 
