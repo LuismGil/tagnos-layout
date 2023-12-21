@@ -1,16 +1,17 @@
 <template>
   <div class="container-status-card">
-    <div class="container-status-card__bar" />
+    <div class="container-status-card__bar" :style="{ backgroundColor: matricula.color}"/>
     <div class="container-status-card__header">
       <div class="container-status-card__header__left">
         <q-icon
           name="far fa-eye"
           @click="visualizarMatricula(matricula)"
         />
-        <span class="container-status-card__header__left__name">
+        <p class="container-status-card__header__left__name">
           {{ matricula.nome }}
-        </span> |
-        <span> <b>MATRÍCULA</b> {{ matricula.id }}</span>
+        </p>
+        <q-separator vertical/>
+        <p class="container-status-card__header__left__matricula"> <span>MATRÍCULA</span> {{ matricula.id }}</p>
       </div>
       <q-icon
         :name="show ? 'far fa-chevron-up': 'fas fa-chevron-down'"
@@ -48,13 +49,19 @@
         </span>
       </div>
       <div class="container-status-card__body__secundaria">
-        <q-icon name="fas fa-edit"/>
-        <q-icon name="fas fa-file"/>
+        <q-icon
+          v-for="(icon, iconIndex) in icons"
+          :key="iconIndex"
+          :name="icon.name"
+          :size="icon.size"
+          :color="icon.color"
+        />
+        <!-- <q-icon name="fas fa-file"/>
         <q-icon name="fas fa-print"/>
         <q-icon name="far fa-times" size="32px"/>
         <q-icon name="fas fa-trash-alt"
           color="red"
-        />
+        /> -->
       </div>
     </div>
   </div>
@@ -73,16 +80,41 @@ export default defineComponent({
   },
   data () {
     return {
-      show: false
+      show: false,
+      icons: [
+        {
+          name: 'fas fa-edit',
+          color: '',
+          size: ''
+        },
+        {
+          name: 'far fa-file-alt',
+          color: '',
+          size: ''
+        },
+        {
+          name: 'fas fa-print',
+          color: '',
+          size: ''
+        },
+        {
+          name: 'far fa-times',
+          color: '',
+          size: '30px'
+        },
+        {
+          name: 'far fa-trash-alt',
+          color: 'red',
+          size: ''
+        }
+      ]
     }
   },
   created () {
-    console.log(this.matricula)
   },
   methods: {
     visualizarMatricula (matricula) {
       this.$router.push(`/matricula/${matricula.id}`)
-      console.log('aqasdf?', matricula)
     }
   }
 })
@@ -119,12 +151,26 @@ export default defineComponent({
     padding: 25px;
 
     &__left {
+      display: flex;
+
       .q-icon {
         margin: 0 12px 0 0;
       }
 
       &__name {
         font-weight: 600;
+        width: 400px;
+      }
+
+      &__matricula {
+        span {
+          font-weight: 600;
+        }
+      }
+
+      .q-separator {
+        margin: 0 15px;
+        color: blue;
       }
     }
 

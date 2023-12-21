@@ -85,7 +85,8 @@ export default defineComponent({
   lang="scss"
 >
   .container-matriculas {
-    padding: 0 68px 0 62px;
+    padding: 25px 68px 0 62px;
+
     h1 {
       color: #3E464E;
       font-size: 32px;
