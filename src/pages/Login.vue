@@ -91,6 +91,7 @@ export default defineComponent({
     background-image: url("../assets/img/02-0519-0584-campo-grande-vr.png");
     background-repeat: no-repeat;
     background-blend-mode: darken;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     font-size: 32px;
