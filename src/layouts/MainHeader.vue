@@ -11,14 +11,15 @@
         </div>
       </div>
       <div class="header__info__icons">
-        <div
+        <router-link
           v-for="(icon, indexIcon) in iconsHeader"
           :key="indexIcon"
+          :to="{name: `${icon.to}`}"
         >
           <div :class="icon.class">
             <q-icon :name="icon.name" />
           </div>
-        </div>
+        </router-link>
         <div class="header__info__icons__foto">
           <img src="src/assets/img/header.png" />
         </div>
@@ -56,15 +57,18 @@ export default defineComponent({
       iconsHeader: [
         {
           class: 'header__icons__notificacoes',
-          name: 'fa-light fa-bell'
+          name: 'fa-light fa-bell',
+          to: ''
         },
         {
           class: 'header__icons__modulos',
-          name: 'fa-light fa-grid-2'
+          name: 'fa-light fa-grid-2',
+          to: 'modulos'
         },
         {
           class: 'header__icons__mensagens',
-          name: 'fa-regular fa-message'
+          name: 'fa-regular fa-message',
+          to: ''
         }
       ],
       infoSistema: [
@@ -134,6 +138,11 @@ export default defineComponent({
           height: 24px;
           width: 24px;
         }
+
+        .q-icon {
+          font-size: 18px;
+          font-weight: 300;
+        }
       }
 
       &__foto {
@@ -162,6 +171,11 @@ export default defineComponent({
       display: flex;
       flex-direction: row;
       gap: 10px;
+
+      .q-icon {
+        font-size: 16px;
+        font-weight: 300;
+      }
     }
   }
 }
