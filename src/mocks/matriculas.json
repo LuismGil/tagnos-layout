@@ -1,39 +1,191 @@
 [
   {
     "nome": "MAICON JEFERSON SIMON  RODRIGUES DOS SANTOS",
-    "id": "35353535",
+    "id": "322213353535",
     "chamada": "55",
     "nivel": "1º Ano",
     "turno": "MATUTINO",
     "turma": "TURMA(DANILO)",
-    "color": "#1A8428"
+    "color": "#1A8428",
+    "inep": "353535345646",
+    "genero": "MASCULINO",
+    "nomeSocial": "JOÃO CARLOS DA SILVEIRA",
+    "nascimento": "12/03/1998",
+    "idade": "26",
+    "responsaveis": [
+      {
+        "nome": "JESUS BERNARDO TESTES",
+        "tipoResponsavel": "PAI BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL TESTE"
+      },
+      {
+        "nome": "ILDA DE SOUZA TESTES",
+        "tipoResponsavel": "MÃE BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL"
+      },
+      {
+        "nome": "JESUS BERNARDO TESTES",
+        "tipoResponsavel": "MÃE BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL"
+      },
+      {
+        "nome": "ILDA DE SOUZA TESTES",
+        "tipoResponsavel": "MÃE BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL"
+      }
+    ],
+    "endereco": {
+      "nome": "RUA FRANCISCO AMARAL  DO NASCIMENTO MILITÃO RUIZ",
+      "numero": "1552 - AP 301",
+      "bairro": "jardim monumento teste",
+      "cidade": "Campo grande - ms",
+      "cep": "69058-582"
+    }
   },
   {
     "nome": "JEFERSON DOS SANTOS",
-    "id": "247827482",
+    "id": "247821237482",
     "chamada": "545",
     "nivel": "1º Ano",
     "turno": "MATUTINO",
     "turma": "TURMA(DANILO)",
-    "color": "#691177"
+    "color": "#691177",
+    "inep": "353535345646",
+    "genero": "MASCULINO",
+    "nomeSocial": "JOÃO CARLOS DA SILVEIRA",
+    "nascimento": "21/06/2019",
+    "idade": "3",
+    "responsaveis": [
+      {
+        "nome": "JESUS BERNARDO TESTES",
+        "tipoResponsavel": "PAI BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL TESTE"
+      },
+      {
+        "nome": "ILDA DE SOUZA TESTES",
+        "tipoResponsavel": "MÃE BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL"
+      },
+      {
+        "nome": "JESUS BERNARDO TESTES",
+        "tipoResponsavel": "MÃE BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL"
+      },
+      {
+        "nome": "ILDA DE SOUZA TESTES",
+        "tipoResponsavel": "MÃE BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL"
+      }
+    ],
+    "endereco": {
+      "nome": "RUA FRANCISCO AMARAL  DO NASCIMENTO MILITÃO RUIZ",
+      "numero": "1552 - AP 301",
+      "bairro": "jardim monumento teste",
+      "cidade": "Campo grande - ms",
+      "cep": "69058-582"
+    }
   },
   {
     "nome": "MARIA FERNANDA LARES PEROZA",
-    "id": "42166",
+    "id": "4212366",
     "chamada": "23123",
     "nivel": "3º Ano",
     "turno": "MATUTINO",
     "turma": "TURMA(DANILO)",
-    "color": "#D6A80F"
+    "color": "#D6A80F",
+    "inep": "353535345646",
+    "genero": "MASCULINO",
+    "nomeSocial": "JOÃO CARLOS DA SILVEIRA",
+    "nascimento": "21/08/2003",
+    "idade": "20",
+    "responsaveis": [
+      {
+        "nome": "JESUS BERNARDO TESTES",
+        "tipoResponsavel": "PAI BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL TESTE"
+      },
+      {
+        "nome": "ILDA DE SOUZA TESTES",
+        "tipoResponsavel": "MÃE BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL"
+      },
+      {
+        "nome": "JESUS BERNARDO TESTES",
+        "tipoResponsavel": "MÃE BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL"
+      },
+      {
+        "nome": "ILDA DE SOUZA TESTES",
+        "tipoResponsavel": "MÃE BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL"
+      }
+    ],
+    "endereco": {
+      "nome": "RUA FRANCISCO AMARAL  DO NASCIMENTO MILITÃO RUIZ",
+      "numero": "1552 - AP 301",
+      "bairro": "jardim monumento teste",
+      "cidade": "Campo grande - ms",
+      "cep": "69058-582"
+    }
   },
   {
     "nome": "MAICON JEFERSON SIMON  RODRIGUES DOS SANTOS",
-    "id": "35353535",
+    "id": "35321353535",
     "chamada": "55",
     "nivel": "1º Ano",
     "turno": "MATUTINO",
     "turma": "TURMA(DANILO)",
-    "color": "#1A8428"
+    "color": "#1A8428",
+    "inep": "353535345646",
+    "genero": "MASCULINO",
+    "nomeSocial": "JOÃO CARLOS DA SILVEIRA",
+    "nascimento": "12/03/1998",
+    "idade": "26",
+    "responsaveis": [
+      {
+        "nome": "JESUS BERNARDO TESTES",
+        "tipoResponsavel": "PAI BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL TESTE"
+      },
+      {
+        "nome": "ILDA DE SOUZA TESTES",
+        "tipoResponsavel": "MÃE BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL"
+      },
+      {
+        "nome": "JESUS BERNARDO TESTES",
+        "tipoResponsavel": "MÃE BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL"
+      },
+      {
+        "nome": "ILDA DE SOUZA TESTES",
+        "tipoResponsavel": "MÃE BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL"
+      }
+    ],
+    "endereco": {
+      "nome": "RUA FRANCISCO AMARAL  DO NASCIMENTO MILITÃO RUIZ",
+      "numero": "1552 - AP 301",
+      "bairro": "jardim monumento teste",
+      "cidade": "Campo grande - ms",
+      "cep": "69058-582"
+    }
   },
   {
     "nome": "JEFERSON DOS SANTOS",
@@ -42,42 +194,232 @@
     "nivel": "1º Ano",
     "turno": "MATUTINO",
     "turma": "TURMA(DANILO)",
-    "color": "#691177"
+    "color": "#691177",
+    "inep": "353535345646",
+    "genero": "MASCULINO",
+    "nomeSocial": "JOÃO CARLOS DA SILVEIRA",
+    "nascimento": "12/03/1998",
+    "idade": "26",
+    "responsaveis": [
+      {
+        "nome": "JESUS BERNARDO TESTES",
+        "tipoResponsavel": "PAI BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL TESTE"
+      },
+      {
+        "nome": "ILDA DE SOUZA TESTES",
+        "tipoResponsavel": "MÃE BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL"
+      },
+      {
+        "nome": "JESUS BERNARDO TESTES",
+        "tipoResponsavel": "MÃE BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL"
+      },
+      {
+        "nome": "ILDA DE SOUZA TESTES",
+        "tipoResponsavel": "MÃE BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL"
+      }
+    ],
+    "endereco": {
+      "nome": "RUA FRANCISCO AMARAL  DO NASCIMENTO MILITÃO RUIZ",
+      "numero": "1552 - AP 301",
+      "bairro": "jardim monumento teste",
+      "cidade": "Campo grande - ms",
+      "cep": "69058-582"
+    }
   },
   {
     "nome": "MARIA FERNANDA LARES PEROZA",
-    "id": "42166",
+    "id": "4212166",
     "chamada": "23123",
     "nivel": "3º Ano",
     "turno": "MATUTINO",
     "turma": "TURMA(DANILO)",
-    "color": "#D6A80F"
+    "color": "#D6A80F",
+    "inep": "353535345646",
+    "genero": "MASCULINO",
+    "nomeSocial": "JOÃO CARLOS DA SILVEIRA",
+    "nascimento": "12/03/1998",
+    "idade": "26",
+    "responsaveis": [
+      {
+        "nome": "JESUS BERNARDO TESTES",
+        "tipoResponsavel": "PAI BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL TESTE"
+      },
+      {
+        "nome": "ILDA DE SOUZA TESTES",
+        "tipoResponsavel": "MÃE BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL"
+      },
+      {
+        "nome": "JESUS BERNARDO TESTES",
+        "tipoResponsavel": "MÃE BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL"
+      },
+      {
+        "nome": "ILDA DE SOUZA TESTES",
+        "tipoResponsavel": "MÃE BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL"
+      }
+    ],
+    "endereco": {
+      "nome": "RUA FRANCISCO AMARAL  DO NASCIMENTO MILITÃO RUIZ",
+      "numero": "1552 - AP 301",
+      "bairro": "jardim monumento teste",
+      "cidade": "Campo grande - ms",
+      "cep": "69058-582"
+    }
   },
   {
     "nome": "MAICON JEFERSON SIMON  RODRIGUES DOS SANTOS",
-    "id": "35353535",
+    "id": "35352313535",
     "chamada": "55",
     "nivel": "1º Ano",
     "turno": "MATUTINO",
     "turma": "TURMA(DANILO)",
-    "color": "#1A8428"
+    "color": "#1A8428",
+    "inep": "353535345646",
+    "genero": "MASCULINO",
+    "nomeSocial": "JOÃO CARLOS DA SILVEIRA",
+    "nascimento": "12/03/1998",
+    "idade": "26",
+    "responsaveis": [
+      {
+        "nome": "JESUS BERNARDO TESTES",
+        "tipoResponsavel": "PAI BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL TESTE"
+      },
+      {
+        "nome": "ILDA DE SOUZA TESTES",
+        "tipoResponsavel": "MÃE BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL"
+      },
+      {
+        "nome": "JESUS BERNARDO TESTES",
+        "tipoResponsavel": "MÃE BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL"
+      },
+      {
+        "nome": "ILDA DE SOUZA TESTES",
+        "tipoResponsavel": "MÃE BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL"
+      }
+    ],
+    "endereco": {
+        "nome": "RUA FRANCISCO AMARAL  DO NASCIMENTO MILITÃO RUIZ",
+        "numero": "1552 - AP 301",
+        "bairro": "jardim monumento teste",
+        "cidade": "Campo grande - ms",
+        "cep": "69058-582"
+      }
   },
   {
     "nome": "JEFERSON DOS SANTOS",
-    "id": "247827482",
+    "id": "247827423182",
     "chamada": "545",
     "nivel": "1º Ano",
     "turno": "MATUTINO",
     "turma": "TURMA(DANILO)",
-    "color": "#691177"
+    "color": "#691177",
+    "inep": "353535345646",
+    "genero": "MASCULINO",
+    "nomeSocial": "JOÃO CARLOS DA SILVEIRA",
+    "nascimento": "12/03/1998",
+    "idade": "26",
+    "responsaveis": [
+      {
+        "nome": "JESUS BERNARDO TESTES",
+        "tipoResponsavel": "PAI BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL TESTE"
+      },
+      {
+        "nome": "ILDA DE SOUZA TESTES",
+        "tipoResponsavel": "MÃE BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL"
+      },
+      {
+        "nome": "JESUS BERNARDO TESTES",
+        "tipoResponsavel": "MÃE BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL"
+      },
+      {
+        "nome": "ILDA DE SOUZA TESTES",
+        "tipoResponsavel": "MÃE BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL"
+      }
+    ],
+    "endereco": {
+      "nome": "RUA FRANCISCO AMARAL  DO NASCIMENTO MILITÃO RUIZ",
+      "numero": "1552 - AP 301",
+      "bairro": "jardim monumento teste",
+      "cidade": "Campo grande - ms",
+      "cep": "69058-582"
+    }
   },
   {
     "nome": "MARIA FERNANDA LARES PEROZA",
-    "id": "42166",
+    "id": "42162316",
     "chamada": "23123",
     "nivel": "3º Ano",
     "turno": "MATUTINO",
     "turma": "TURMA(DANILO)",
-    "color": "#D6A80F"
+    "color": "#D6A80F",
+    "inep": "353535345646",
+    "genero": "MASCULINO",
+    "nomeSocial": "JOÃO CARLOS DA SILVEIRA",
+    "nascimento": "12/03/1998",
+    "idade": "26",
+    "responsaveis": [
+      {
+        "nome": "JESUS BERNARDO TESTES",
+        "tipoResponsavel": "PAI BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL TESTE"
+      },
+      {
+        "nome": "ILDA DE SOUZA TESTES",
+        "tipoResponsavel": "MÃE BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL"
+      },
+      {
+        "nome": "JESUS BERNARDO TESTES",
+        "tipoResponsavel": "MÃE BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL"
+      },
+      {
+        "nome": "ILDA DE SOUZA TESTES",
+        "tipoResponsavel": "MÃE BIOLÓGICA",
+        "numeroContato": "92 994571858",
+        "profissao": "ENGENHEIRO CIVIL"
+      }
+    ],
+    "endereco": {
+      "nome": "RUA FRANCISCO AMARAL  DO NASCIMENTO MILITÃO RUIZ",
+      "numero": "1552 - AP 301",
+      "bairro": "jardim monumento teste",
+      "cidade": "Campo grande - ms",
+      "cep": "69058-582"
+    }
   }
 ]
