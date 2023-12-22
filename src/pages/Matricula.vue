@@ -39,7 +39,7 @@
       </q-tabs>
     </div>
     <div class="matricula__card">
-      <container-info-matricula />
+      <container-info-matricula :matricula="matricula" />
     </div>
   </div>
 </template>
@@ -47,6 +47,7 @@
 <script>
 import { defineComponent } from 'vue'
 import ContainerInfoMatricula from 'src/components/ContainerInfoMatricula.vue'
+import matriculas from 'src/mocks/matriculas.json'
 
 export default defineComponent({
   name: 'EducacaoMatriculas',
@@ -55,6 +56,7 @@ export default defineComponent({
   },
   data () {
     return {
+      idMatricula: null,
       titulo: 'Consulta de Matrícula',
       telasAbertas: [
         { descricao: 'Ocorrências' },
@@ -104,7 +106,15 @@ export default defineComponent({
           label: 'Observações'
         }
       ],
-      tab: 'Aluno'
+      tab: 'Aluno',
+      listaMatriculas: matriculas,
+      matricula: null
+    }
+  },
+  created () {
+    this.idMatricula = this.$route.params.id
+    if (this.idMatricula) {
+      this.matricula = this.listaMatriculas.filter((matricula) => matricula.id === this.idMatricula)[0]
     }
   }
 })
