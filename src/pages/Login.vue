@@ -153,7 +153,7 @@ export default defineComponent({
       height: 474px;
       padding: 45px 30px;
       position: relative;
-      width: 498px;
+      width: 440px;
 
       &__titulo {
         color: #3E464E;

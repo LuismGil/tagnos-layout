@@ -138,6 +138,11 @@ export default defineComponent({
           height: 24px;
           width: 24px;
         }
+
+        .q-icon {
+          font-size: 18px;
+          font-weight: 300;
+        }
       }
 
       &__foto {
@@ -166,6 +171,11 @@ export default defineComponent({
       display: flex;
       flex-direction: row;
       gap: 10px;
+
+      .q-icon {
+        font-size: 16px;
+        font-weight: 300;
+      }
     }
   }
 }
