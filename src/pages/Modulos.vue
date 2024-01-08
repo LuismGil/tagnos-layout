@@ -49,16 +49,22 @@
         :style="{border: `2px solid ${modulo.cor}`}"
         :to="{ name: `${modulo.name}` }"
       >
-        <div class="modulos-container__modulos-card__card__left">
-          <img class="modulos-container__modulos-card__card__left__icon" :src="modulo.src" alt="modulo.alt">
-          <div class="modulos-container__modulos-card__card__left__descricao">
-            {{ modulo.descricao }}
+      <div>
+        <div class="modulos-container__modulos-card__card__left flex-col">
+          <div class="modulos-container__modulos-card__card__border"
+              @mouseover="onMouseOver(modulo)"
+              @mouseout="onMouseOut(modulo)">
+          <img
+              class="modulos-container__modulos-card__card__left__icon"
+              :src="modulo.hovered ? modulo.hoverSrc : modulo.src"
+              :alt="modulo.alt"
+          />
           </div>
-        </div>
-        <q-icon
-          size="25px"
-          name="fa-solid fa-chevron-right"
-        />
+      <div class="modulos-container__modulos-card__card__descricao">
+        {{ modulo.descricao }}
+      </div>
+</div>
+  </div>
       </router-link>
     </div>
   </div>
@@ -88,55 +94,69 @@ export default defineComponent({
         {
           descricao: 'Secretaria Escolar',
           src: '/img/iconsModulos/icon-SecretariaEscolar.svg',
+          hoverSrc: '/img/iconsModulos/icon-SecretariaEscolar-branco.svg',
           name: 'matriculas',
-          cor: '#C41B2C'
+          hovered: false
         },
         {
           descricao: 'Diário de Classe',
           src: '/img/iconsModulos/icon-DiarioClasse.svg',
+          hoverSrc: '/img/iconsModulos/icon-DiarioClasse-branco.svg',
           name: '',
-          cor: '#D6A80F'
+          hovered: false
         },
         {
           descricao: 'Coordenação Pedagógica',
           src: '/img/iconsModulos/icon-CoordenacaoPedagogica.svg',
+          hoverSrc: '/img/iconsModulos/icon-CoordenacaoPedagogica-branco.svg',
           name: '',
-          cor: '#149224'
+          hovered: false
         },
         {
           descricao: 'Sala de Tecnologia',
           src: '/img/iconsModulos/icon-SalaTecnologia.svg',
+          hoverSrc: '/img/iconsModulos/icon-SalaTecnologia-branco.svg',
           name: '',
-          cor: '#5F096D'
+          hovered: false
         },
         {
           descricao: 'Secretaria de Educação',
           src: '/img/iconsModulos/icon-SecretariaEducacao.svg',
+          hoverSrc: '/img/iconsModulos/icon-SecretariaEducacao-branco.svg',
           name: '',
-          cor: '#7A0A0A'
+          hovered: false
         },
         {
           descricao: 'Controle Financeiro',
           src: '/img/iconsModulos/icon-ControleFinanceiro.svg',
+          hoverSrc: '/img/iconsModulos/icon-ControleFinanceiro-branco.svg',
           name: '',
-          cor: '#0069A8'
+          hovered: false
         },
         {
           descricao: 'Controle de Bibliotéca',
           src: '/img/iconsModulos/icon-ControleBiblioteca.svg',
+          hoverSrc: '/img/iconsModulos/icon-ControleBiblioteca-branco.svg',
           name: '',
-          cor: '#635DC9'
+          hovered: false
         },
         {
           descricao: 'Transporte Escolar',
           src: '/img/iconsModulos/icon-TransporteEscolar.svg',
+          hoverSrc: '/img/iconsModulos/icon-TransporteEscolar-branco.svg',
           name: '',
-          cor: '#E76E00'
+          hovered: false
         }
       ]
     }
   },
   methods: {
+    onMouseOver (modulo) {
+      modulo.hovered = true
+    },
+    onMouseOut  (modulo) {
+      modulo.hovered = false
+    },
     sair () {
       this.$router.push('login')
     }
@@ -185,6 +205,7 @@ export default defineComponent({
     align-items: center;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 10px;
 
     div {
@@ -224,11 +245,11 @@ export default defineComponent({
 
 .container-modulos{
   text-align: center;
-  font-size: 32px;
+  font-size: 48px;
   font-weight: bold;
-  color: #3E464E;
-  margin-top: 70px;
-  margin-bottom: 70px;
+  color: #184372;
+  margin-top: 24px;
+  margin-bottom: 45px;
 }
 .modulos-container{
   display: flex;
@@ -244,34 +265,54 @@ export default defineComponent({
     width: 502px;
 
     @media (min-width: map-get($mediaQueries, 'xs')) {
-      margin: 10px 0 35px;
       width: 1080px;
+      height: 600px;
     }
 
     &__card {
       align-items: center;
-      border-radius: 12px;
       cursor: pointer;
-      color: #3E464E;
       display: flex;
-      height: 106px;
-      padding: 0 32px;
-      justify-content: space-between;
-      width: 501px;
 
-      &__left {
-        align-items: center;
+      &__descricao{
         display: flex;
-
-        &__icon {
-          height: 75px;
-          margin: 0 40px 0 0;
-          width: 75px;
+        font-size: 22px;
+        font-weight: bold;
+        width: 200px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #184372;
+        cursor: default;
         }
 
-        &__descricao{
-          font-size: 22px;
-          font-weight: 500;
+        &__border{
+          width: 184px;
+          height: 184px;
+          border: 2px solid #184372;
+          border-radius: 50%;
+          margin-bottom: 11px;
+          position: relative;
+          padding: 50px;
+          overflow: hidden;
+          transition: all 0.3s;
+        }
+
+        &__border:hover {
+          background-color: #184372;
+          transition: all 0.3s;
+        }
+
+        &__left {
+          align-items: center;
+          display: flex;
+
+          &__icon {
+          width: 86px;
+          height: 72px;
+          transition: opacity 0.5s ease-in-out;
+          position: absolute;
+          left: 50px;
+          top: 50px;
         }
       }
     }
